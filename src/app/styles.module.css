@@ -1,0 +1,19 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    height: 600px;
+
+}
+
+.filterBlock{
+    display: flex;
+    width: 320px;
+    border-right: 1px rgb(255 255 255 / 0.1) solid;
+}
+
+.contentBlock{
+
+}
+
+

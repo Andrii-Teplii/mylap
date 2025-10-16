@@ -1,0 +1,49 @@
+.container{
+    display: flex;
+    width: 100%;
+    padding: 16px  40px  16px  40px;
+    border-bottom: 1px rgb(255 255 255 / 0.1) solid;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logoBlock{
+    display: flex;
+}
+
+.textLogo{
+    font-family: var(--font-custom);
+    font-weight: 700;
+    margin-left: 14px;
+    color: white;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.navigationBlock{
+    display: flex;
+    align-items: center;
+}
+
+.linkBlock{
+    display: flex;
+    gap: 2.25rem;
+    margin-left: 3.25rem;
+}
+
+.rightBlock{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #242E47;
+     margin-left: 8px;
+}
+

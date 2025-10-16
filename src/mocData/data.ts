@@ -1,0 +1,544 @@
+import { MocDataItem } from "./typeDataItem"
+
+export const MocDataLenovoY740:MocDataItem = {
+    id:"1",
+    title:"LENOVO LEGION Y740",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/x2j2hh84yh9f2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/iwk8kytl8rab1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/tegowjsvi7xt2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/ku7mb0mwny49-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/40r8rv9uo4ha3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/7t1ry2cln1m51-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/xl0scocvq59e2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/vs7m9c62bnt72-UA/image;s=1000x700'
+    ],
+    brand:'lenovo',
+    display:{
+        size:"15.6",
+        resolution:"1920x1080",
+        type:"IPS",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"144",
+    },
+    cpu:{
+        name:"i7-9750H",
+        brand:"Intel",
+        gen:"9-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR4",
+        size:"16",
+        emptySlot:"0"
+    },
+    mem:{
+        ssd:{
+            size:"512",
+            type:'M2',
+            emptySlots:"0"
+        },
+        hdd:{
+            size:"0",
+            emptySlots:"1"
+        },
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"GTX 1660 Ti",
+            memory:"3",
+        },
+        integrate:{
+            brand:"Intel",
+            model:"UHD Graphics 630"
+        }
+    },
+    camera:{
+        mp:"1",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"2",
+        usbTypeC:"2",
+        HDMI:"1",
+        DisplayPort:"1",
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:true,
+        light:"rgb",
+    },
+    network:{
+        bluetooth:"5.0",
+        wifi:"Killer Wireless-AC",
+        sim:null,
+    },
+    battery:{
+        twb:"3"
+    },
+    Dimensions:{
+        w:361,
+        d:265,
+        h:23.85,
+        kg:2.2
+    },
+    originalBox:false
+}
+
+export const MocDataDellPrecision7740:MocDataItem = {
+    id:"2",
+    title:"Dell Precision 7740",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/y3fuga9reszy1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/ltc3yxutwfvu1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/ltuibfuxv92u1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/cq3583fgoa132-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/2knnydromcl72-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/o7dr59cdxszq3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/8ko2naplvp81-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/6etri00y4eve1-UA/image;s=1000x700',
+    ],
+    brand:"dell",
+    display:{
+        size:"17.3",
+        resolution:"1920x1080",
+        type:"IPS",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"60",
+    },
+    cpu:{
+        name:"i7-9750H",
+        brand:"Intel",
+        gen:"9-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR4",
+        size:"64",
+        emptySlot:"0"
+    },
+    mem:{
+        ssd:{
+            size:"512",
+            type:'NVMe',
+            emptySlots:"0"
+        },
+        hdd:null,
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"Quadro RTX 4000",
+            memory:"8",
+        },
+        integrate:{
+            brand:"Intel",
+            model:"UHD Graphics 630"
+        }
+    },
+    camera:{
+        mp:"0.92",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"3",
+        usbTypeC:"2",
+        HDMI:"1",
+        DisplayPort:"1",
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:true,
+        light:"rgb",
+    },
+    network:{
+        bluetooth:"5.0",
+        wifi:"Wi-Fi 6",
+        sim:null,
+    },
+    battery:{
+        twb:"4"
+    },
+    Dimensions:{
+        w:415,
+        d:274,
+        h:30.3,
+        kg:3.08
+    },
+    originalBox:false
+}
+
+export const MocDataMSIGF65Thin:MocDataItem = {
+    id:"3",
+    title:"MSI GF65 Thin",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/vo8v26ewn1sx2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/y0er9q510s6j1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/s9ufifcnbfqn3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/s8d6j00g0b6c3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/qrtyqfoayp9q3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/2f03y9gxdbwt1-UA/image;s=1000x700'
+    ],
+    brand:"msi",
+    display:{
+        size:"15.6",
+        resolution:"1920x1080",
+        type:"IPS",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"120",
+    },
+    cpu:{
+        name:"i7-10850H",
+        brand:"Intel",
+        gen:"10-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR4",
+        size:"32",
+        emptySlot:"1"
+    },
+    mem:{
+        ssd:{
+            size:"512",
+            type:'M2',
+            emptySlots:"1"
+        },
+        hdd:null,
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"GeForce RTX 3060 Max-Q",
+            memory:"6",
+        },
+        integrate:{
+            brand:"Intel",
+            model:"UHD Graphics 630"
+        }
+    },
+    camera:{
+        mp:"0.92",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"2",
+        usbTypeC:"2",
+        HDMI:"1",
+        DisplayPort:null,
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:false,
+        light:"rgb red",
+    },
+    network:{
+        bluetooth:"5.1",
+        wifi:"Wi-Fi 6",
+        sim:null,
+    },
+    battery:{
+        twb:"2"
+    },
+    Dimensions:{
+        w:359,
+        d:254,
+        h:21.7,
+        kg:1.86
+    },
+    originalBox:false
+}
+
+export const MocDataMSIGS63VR7RF252US:MocDataItem = {
+    id:"4",
+    title:"MSI GS63VR 7RF-252US",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/mxji0lr4hzaz-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/2pnfrivp1ppq1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/ffugnni1bdcu2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/d3q654f19rfd3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/zznzmw8eiusb1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/lvdkkbwaeibw-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/a2j1t5snxmfb1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/3mufmg50lr7f1-UA/image;s=1000x700'
+    ],
+    brand:"msi",
+    display:{
+        size:"15.6",
+        resolution:"1920x1080",
+        type:"IPS",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"60",
+    },
+    cpu:{
+        name:"i7-7700HQ",
+        brand:"Intel",
+        gen:"7-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR4",
+        size:"16",
+        emptySlot:"1"
+    },
+    mem:{
+        ssd:{
+            size:"256",
+            type:'M2',
+            emptySlots:"0"
+        },
+        hdd:null,
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"GeForce GTX 1060",
+            memory:"6",
+        },
+        integrate:{
+            brand:"Intel",
+            model:"UHD Graphics 630"
+        }
+    },
+    camera:{
+        mp:"0.92",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"3",
+        usbTypeC:"1",
+        HDMI:"1",
+        DisplayPort:'1 mini',
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:true,
+        light:"rgb",
+    },
+    network:{
+        bluetooth:"4.1",
+        wifi:"Wi-Fi 5",
+        sim:null,
+    },
+    battery:{
+        twb:"1"
+    },
+    Dimensions:{
+        w:380,
+        d:249,
+        h:17.7,
+        kg:1.8
+    },
+    originalBox:false
+}
+
+export const MocDataDellInspiron7610S:MocDataItem = {
+    id:"5",
+    title:"Dell Inspiron 7610",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/vdzk85ylmgis1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/d970nubqieej3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/2der6lzlryyz2-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/2uiq71l6xmet-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/cne46srq6j6x1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/jmh34vmwbddo1-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/1p4dddybbu0k3-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/oq481x98ml2j3-UA/image;s=1000x700'
+    ],
+    brand:"dell",
+    display:{
+        size:"16",
+        resolution:"3072×1920",
+        type:"WVA",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"60",
+    },
+    cpu:{
+        name:"i7-11800H",
+        brand:"Intel",
+        gen:"11-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR4",
+        size:"32",
+        emptySlot:"1"
+    },
+    mem:{
+        ssd:{
+            size:"1 Tb",
+            type:'NVMe',
+            emptySlots:"0"
+        },
+        hdd:null,
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"GeForce RTX 3060",
+            memory:"6",
+        },
+        integrate:{
+            brand:"Intel",
+            model:"UHD Graphics 630"
+        }
+    },
+    camera:{
+        mp:"0.92",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"3",
+        usbTypeC:"1",
+        HDMI:"1",
+        DisplayPort:'1 mini',
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:true,
+        light:"rgb",
+    },
+    network:{
+        bluetooth:"5.1",
+        wifi:"Wi-Fi 6",
+        sim:null,
+    },
+    battery:{
+        twb:"1"
+    },
+    Dimensions:{
+        w:380,
+        d:249,
+        h:17.7,
+        kg:1.8
+    },
+    originalBox:false
+}
+
+export const MocDataMSIBravo:MocDataItem = {
+    id:"6",
+    title:"MSI Bravo",
+    price:20000,
+    sellPrice:null,
+    description:'',
+    images:[
+        'https://ireland.apollo.olxcdn.com/v1/files/evharijljcmj-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/dat1ucm6m3693-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/a6zvarn5jj662-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/5a2ue9o8m6373-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/9ssynsmicwvr-UA/image;s=1000x700',
+        'https://ireland.apollo.olxcdn.com/v1/files/sns5n8c34ii42-UA/image;s=1000x700'
+    ],
+    brand:"msi",
+    display:{
+        size:"15.6",
+        resolution:"1920×1080",
+        type:"IPS",
+        finish:"матовий",
+        sensor:false,
+        refreshRate:"144",
+    },
+    cpu:{
+        name:"Ryzen 7 7535HS",
+        brand:"AMD",
+        gen:"7-го",
+        power:"45"
+    },
+    ram:{
+        type:"DDR5",
+        size:"16",
+        emptySlot:"0"
+    },
+    mem:{
+        ssd:{
+            size:"512 gb",
+            type:'M2',
+            emptySlots:"0"
+        },
+        hdd:null,
+    },
+    graphicsCard:{
+        discrete: {
+            brand:"Nvidia",
+            model:"GeForce RTX 4050",
+            memory:"6",
+        },
+        integrate:{
+            brand:"AMD",
+            model:"Radeon™ 660M"
+        }
+    },
+    camera:{
+        mp:"0.92",
+        ir:false,
+    },
+    ports:{
+        usbTypeA:"3",
+        usbTypeC:"1",
+        HDMI:"1",
+        DisplayPort:'1',
+        dvd:false,
+        audioJack:1,
+        rj45:true
+    },
+    keyboard:{
+        numBlock:true,
+        light:"rgb",
+    },
+    network:{
+        bluetooth:"5.1",
+        wifi:"Wi-Fi 6e",
+        sim:null,
+    },
+    battery:{
+        twb:"3"
+    },
+    Dimensions:{
+        w:380,
+        d:249,
+        h:17.7,
+        kg:1.8
+    },
+    originalBox:false
+}
+
+export const arrayProducts = [
+    MocDataLenovoY740,
+    MocDataDellPrecision7740,
+    MocDataMSIGF65Thin,
+    MocDataMSIGS63VR7RF252US,
+    MocDataDellInspiron7610S,
+    MocDataMSIBravo
+]
+

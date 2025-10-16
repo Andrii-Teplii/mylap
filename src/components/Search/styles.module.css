@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    background-color: #242E47;
+    padding: 8px 16px 8px 18px;
+    border-radius: 8px;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+    margin-left: 8px;
+    font-family: var(--font-custom);
+    font-weight: 400;
+    font-size: 16px;
+    width: 160px;
+    padding: 0 8px 0 8px;
+    color: white;
+    outline: none;
+}
+
+.input:focus{
+    border: none;
+}

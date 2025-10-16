@@ -1,0 +1,12 @@
+
+.container{
+    padding: 20px;
+}
+
+.title{
+    color: white;
+    font-family: var(--font-custom);
+    font-weight: 700;
+    font-size: 22px;
+
+}
