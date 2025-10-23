@@ -30,7 +30,7 @@ const myCustomFont = localFonts({
       style: "normal",
     },
   ],
-  variable: "--font-custom",
+  variable: "--font-inter",
 });
 
 export default function RootLayout({

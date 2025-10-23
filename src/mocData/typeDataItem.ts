@@ -1,112 +1,108 @@
-export interface Display {
-    size: string; // Наприклад, "15.6"
-    resolution: string; // Наприклад, "1920x1080"
-    type: string; // Тип матриці, напр. "IPS"
-    finish: string; // "матовий", "глянцевий" і т.п.
-    sensor: boolean; // Чи сенсорний екран
-    refreshRate: string; // Наприклад, "144" Гц
-}
+export type Display = {
+  display_size: string; // Наприклад, "15.6"
+  display_resolution: string; // Наприклад, "1920x1080"
+  display_type: string; // Тип матриці, напр. "IPS"
+  display_finish: string; // "матовий", "глянцевий" і т.п.
+  display_sensor: boolean; // Чи сенсорний екран
+  display_refreshRate: string; // Наприклад, "144" Гц
+};
 
-export interface CPU {
-    name: string; // Наприклад, "i7-9750H"
-    brand: string; // "Intel", "AMD"
-    gen: string; // Наприклад, "9-го"
-    power: string; // TDP, напр. "45" Вт
-}
+export type CPU = {
+  cpu_name: string; // Наприклад, "i7-9750H"
+  cpu_brand: string; // "Intel", "AMD"
+  cpu_gen: string; // Наприклад, "9-го"
+  cpu_power: string; // TDP, напр. "45" Вт
+};
 
-export interface RAM {
-    type: string; // DDR4, DDR5
-    size: string; // Обсяг у ГБ
-    emptySlot: string; // Кількість вільних слотів
-}
+export type RAM = {
+  ram_type: string; // DDR4, DDR5
+  ram_size: string; // Обсяг у ГБ
+  ram_emptySlot: string; // Кількість вільних слотів
+};
 
-interface StorageSSD {
-    size: string; // ГБ
-    type:'NVMe'|'M2';
-    emptySlots: string; // Слоти для розширення
-}
+type StorageSSD = {
+  mem_ssd_size: string | null; // ГБ
+  mem_ssd_type: "NVMe" | "M2";
+  mem_ssd_emptySlots: string; // Слоти для розширення
+};
 
-interface StorageHDD {
-    size: string; // ГБ
-    emptySlots: string; // Слоти для розширення
-}
+type StorageHDD = {
+  mem_hdd_size: string | null; // ГБ
+  mem_hdd_emptySlots: string; // Слоти для розширення
+};
 
-export interface Memory {
-    ssd: StorageSSD|null;
-    hdd: StorageHDD|null;
-}
+export type Memory = StorageSSD | StorageHDD;
 
-interface DiscreteGPU {
-    brand: string;
-    model: string;
-    memory: string; // ГБ
-}
+type DiscreteGPU = {
+  graphicsCard_discrete_brand: string | null;
+  graphicsCard_discrete_model: string;
+  graphicsCard_discrete_memory: string; // ГБ
+};
 
- interface IntegratedGPU {
-    brand: string;
-    model: string;
-}
+type IntegratedGPU = {
+  graphicsCard_integrate_brand: string | null;
+  graphicsCard_integrate_model: string;
+};
 
-export interface GraphicsCard {
-    discrete: DiscreteGPU|null;
-    integrate: IntegratedGPU;
-}
+export type GraphicsCard = DiscreteGPU | IntegratedGPU;
 
-export interface Camera {
-    mp: string; // Мегапікселі
-    ir: boolean; // Інфрачервона камера (для розпізнавання обличчя)
-}
+export type Camera = {
+  camera_mp: string | null; // Мегапікселі
+  camera_ir: boolean; // Інфрачервона камера (для розпізнавання обличчя)
+};
 
-export interface Ports {
-    usbTypeA: string|null;
-    usbTypeC: string|null;
-    HDMI: string|null;
-    DisplayPort: string|null;
-    dvd: boolean|null;
-    audioJack: number|null;
-    rj45:boolean
-}
+export type Ports = {
+  ports_usbTypeA: string | null;
+  ports_usbTypeC: string | null;
+  ports_HDMI: string | null;
+  ports_DisplayPort: string | null;
+  ports_dvd: boolean | null;
+  ports_audioJack: number | null;
+  ports_rj45: boolean;
+};
 
-export interface Keyboard {
-    numBlock: boolean;
-    light: string; // Наприклад, "rgb"
-}
+export type Keyboard = {
+  keyboard_numBlock: boolean;
+  keyboard_light: string; // Наприклад, "rgb"
+};
 
-export interface Network {
-    bluetooth: string; // Наприклад, "5.0"
-    wifi: string; // Назва модуля
-    sim: string | null;
-}
+export type Network = {
+  network_bluetooth: string; // Наприклад, "5.0"
+  network_wifi: string; // Назва модуля
+  network_sim: string | null;
+};
 
-export interface Battery {
-    twb: string; // Час безперевного перегляду відео(напр. 3)
-}
+export type Battery = {
+  battery_twb: string; // Час безперевного перегляду відео(напр. 3)
+};
 
-export interface Dimensions {
-    w: number; // ширина в мм
-    d: number; // глибина в мм
-    h: number; // висота в мм
-    kg: number; // вага в кг
-}
+export type Dimensions = {
+  dimensions_w: number; // ширина в мм
+  dimensions_d: number; // глибина в мм
+  dimensions_h: number; // висота в мм
+  dimensions_kg: number; // вага в кг
+};
 
-export interface MocDataItem {
-    id:string;
-    title: string;
-    brand:string
-    price:number,
-    sellPrice:null|number,
-    description:string,
-    images: string[];
-    display: Display;
-    cpu: CPU;
-    ram: RAM;
-    mem: Memory;
-    graphicsCard: GraphicsCard;
-    camera: Camera|null;
-    ports: Ports;
-    keyboard: Keyboard;
-    network: Network;
-    battery: Battery;
-    Dimensions: Dimensions;
-    originalBox: boolean;
-}
+export type MocDataItem =
+  | {
+      id: string;
+      title: string;
+      brand: string;
+      price: number;
+      sellPrice: null | number;
+      description: string;
+      images: string[];
+      network: Network;
+      originalBox: boolean;
+    }
+  | Display
+  | CPU
+  | RAM
+  | Memory
+  | GraphicsCard
+  | Camera
+  | Ports
+  | Keyboard
+  | Network
+  | Battery
+  | Dimensions;

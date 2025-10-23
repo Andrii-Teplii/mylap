@@ -1,5 +1,7 @@
+
 :root {
   --background: rgb(16 25 34 / var(--tw-bg-opacity, 1));
+  --color-white: #FFFFFF;
 }
 
 html,

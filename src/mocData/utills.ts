@@ -1,69 +1,46 @@
 import { MocDataItem } from "./typeDataItem";
 
 const filterFields = [
-    'price',
-    'brand',
-    'display.size',
-    'display.resolution',
-    'display.type',
-    'display.refreshRate',
-    'cpu.name',
-    'cpu.brand',
-    'ram.type',
-    'ram.size',
-    'mem.ssd.size',
-    'mem.hdd.size',
-    'graphicsCard.discrete.brand',
-    'graphicsCard.discrete.model',
-    'graphicsCard.discrete.memory',
-    'graphicsCard.integrate.brand',
-    'graphicsCard.integrate.model',
-    'camera'
-]
+  "price",
+  "brand",
+  "display_size",
+  "display_resolution",
+  "display_type",
+  "display_refreshRate",
+  "cpu_name",
+  "cpu_brand",
+  "ram_type",
+  "ram_size",
+  "mem_ssd_size",
+  "mem_hdd_size",
+  "graphicsCard_discrete_brand",
+  "graphicsCard_discrete_model",
+  "graphicsCard_discrete_memory",
+  "graphicsCard_integrate_brand",
+  "graphicsCard_integrate_model",
+  "camera_mp",
+] as const;
 
-type FilterValue = (string|null|number|boolean)[]
+export type FilterValue = string[] | number[] | boolean[] | null[];
+export type FilterKey = (typeof filterFields)[number];
 
-function getValueByPath(obj:Record<string,FilterValue>, path:string) {
-  // Handle cases where the object is null/undefined or the path is invalid
-  if (!obj || typeof obj !== 'object' || typeof path !== 'string') {
-    return undefined;
-  }
+export const getFiltersData = (arrProducts: MocDataItem[]) => {
+  const result = {} as Record<FilterKey, FilterValue>;
 
-  // Split the path string into individual keys
-  const keys = path.split('.');
+  for (let i = 0; i < filterFields.length; i++) {
+    const field = filterFields[i] as FilterKey;
 
-  // Traverse the object
-  let current = obj;
-  for (let i = 0; i < keys.length; i++) {
-    const key = keys[i];
-    // If the current object is null/undefined or doesn't have the key, return undefined
-    if (current === null || typeof current !== 'object' || !current.hasOwnProperty(key)) {
-      return null;
+    for (let j = 0; j < arrProducts.length; j++) {
+      const objValue = arrProducts[j][field as keyof MocDataItem];
+
+      if (objValue !== null || objValue !== undefined) {
+        if (!!result[field]) {
+          !result[field].includes(objValue) && result[field].push(objValue);
+        } else {
+          result[field] = [objValue];
+        }
+      }
     }
-    current = current[key];
   }
-
-  // Return the final value found at the end of the path
-  return current;
-}
-
-export const getDataFilter = (arrayProducts:MocDataItem[]) =>{
-    
-
-    const filters:Record<string,(string|null|number|boolean)[]> = {}
-
-   for(let i=0; i<arrayProducts.length; i++){
-    const product = arrayProducts[i];
-    const keys = Object.keys(product)
-
-    for(let j=0; j<filterFields.length; j++){
-       const path = filterFields[j]
-       if(!filters[path]){
-           filters[path] = [getValueByPath(product,path)]
-       }else{
-            filters[path].push(getValueByPath(product,path))
-       }
-    }
-   }
-   console.log(filters)
-} 
+  return result;
+};

@@ -1,0 +1,50 @@
+.checkBoxFilter{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 16;
+    color: var(--color-white);
+    margin: 16px 16px 8px 0;
+}
+
+.optionsBlock{
+    display: flex;
+    flex-direction: column;
+}
+
+.optionItem{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin: 12px 0 12px 0;
+    font-family: var(--font-inter);
+    font-weight: 400;
+    font-size: 14;
+    color: var(--color-white);
+    margin: 16px 16px 8px 0;
+}
+
+.optionInput[type="checkbox"]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background-color: transparent;
+    border: 2px solid #334566;
+    border-radius: 4px;
+}
+
+.optionInput[type='checkbox']:checked{
+    background-image: url('../../assets/icons/tick.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    border-color: #007bff;
+    background-color: #007bff;
+}

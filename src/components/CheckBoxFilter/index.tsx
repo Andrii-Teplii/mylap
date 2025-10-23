@@ -1,5 +1,8 @@
-import React, { FC, useState } from "react";
+"use client";
+
+import React, { useState } from "react";
 import { CheckBoxFilterProp } from "./types";
+import styles from "./styles.module.css";
 
 export function CheckBoxFilter({
   title,
@@ -12,11 +15,16 @@ export function CheckBoxFilter({
   const [activeFilter, setActiveFilter] = useState<boolean>(false);
 
   return (
-    <div>
-      <h1>{title}</h1>
-      <div>
+    <div className={styles.checkBoxFilter}>
+      <h1 className={styles.title}>{title}</h1>
+      <div className={styles.optionsBlock}>
         {arrOptions.map((item, index) => {
-          return <div></div>;
+          return (
+            <label key={index} className={styles.optionItem}>
+              {item}
+              <input type="checkbox" className={styles.optionInput} />
+            </label>
+          );
         })}
       </div>
     </div>

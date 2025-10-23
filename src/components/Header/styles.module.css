@@ -12,7 +12,7 @@
 }
 
 .textLogo{
-    font-family: var(--font-custom);
+    font-family: var(--font-inter);
     font-weight: 700;
     margin-left: 14px;
     color: white;
