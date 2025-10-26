@@ -1,6 +1,10 @@
 
 .container{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: scroll;
 }
 
 .title{
@@ -10,12 +14,3 @@
     font-size: 22px;
 }
 
-.groupFilter{
-    margin-top: 12px;
-}
-
-.groupFilterTitle{
-    color: var(--color-white);
-    font-family: var(--font-inter);
-    font-size: 18px;
-}

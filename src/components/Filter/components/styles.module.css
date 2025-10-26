@@ -1,0 +1,36 @@
+.groupFilter{
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+}
+
+.groupFilterTitle{
+    color: var(--color-white);
+    font-family: var(--font-inter);
+    font-size: 18px;
+}
+
+.groupFilterTitleButton{
+    all: unset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.groupFilterContainer{
+    max-height: 800px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.groupFilterContainer__unActive{
+    max-height: 0px;
+}
+
+.groupFilterArrow{
+    transition: transform 0.5s ease-in-out;
+}
+
+.groupFilterArrow__Active{
+    transform: rotate(-90deg);
+}

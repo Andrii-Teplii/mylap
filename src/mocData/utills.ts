@@ -19,6 +19,7 @@ const filterFields = [
   "graphicsCard_integrate_brand",
   "graphicsCard_integrate_model",
   "camera_mp",
+  "camera_ir",
 ] as const;
 
 export type FilterValue = string[] | number[] | boolean[] | null[];
@@ -33,7 +34,7 @@ export const getFiltersData = (arrProducts: MocDataItem[]) => {
     for (let j = 0; j < arrProducts.length; j++) {
       const objValue = arrProducts[j][field as keyof MocDataItem];
 
-      if (objValue !== null || objValue !== undefined) {
+      if (objValue !== null && objValue !== undefined) {
         if (!!result[field]) {
           !result[field].includes(objValue) && result[field].push(objValue);
         } else {

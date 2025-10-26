@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import localFonts from "next/font/local";
 import "../styles/globals.css";
+import Footer from "@/components/Footer";
 
 const myCustomFont = localFonts({
   src: [
@@ -43,6 +44,7 @@ export default function RootLayout({
       <body>
         <Header />
         <div className="containerPage">{children}</div>
+        <Footer />
       </body>
     </html>
   );

@@ -6,19 +6,45 @@ import { FilterKey, FilterValue, getFiltersData } from "@/mocData/utills";
 import { arrayProducts } from "@/mocData/data";
 import { CheckBoxFilter } from "../CheckBoxFilter";
 import { Formik } from "formik";
+import { ContainerBlocks } from "./components/ContainerBlocks";
 
 export default function Filter() {
   const filtersData = getFiltersData(arrayProducts);
-  const [stateDisplayBlock, setStateDisplayBlock] = useState<boolean>(false);
+
+  type ListBlockType =
+    | "display"
+    | "cpu"
+    | "ram"
+    | "mem"
+    | "discreteGraphicsCard"
+    | "integratedGraphicsCard"
+    | "camera";
+
+  const [stateBlocks, setStateBlocks] = useState<
+    Record<ListBlockType, boolean>
+  >({
+    display: false,
+    cpu: false,
+    ram: false,
+    mem: false,
+    discreteGraphicsCard: false,
+    integratedGraphicsCard: false,
+    camera: false,
+  });
 
   const emptyFilter = useMemo(() => {
     const acc = {} as Record<FilterKey, FilterValue>;
     for (const key in filtersData) {
       acc[key as FilterKey] = [];
     }
-    console.log(acc);
     return acc;
   }, [filtersData]);
+
+  const changeStateBlock = (nameBlock: ListBlockType) => {
+    const a = { ...stateBlocks };
+    a[nameBlock] = !stateBlocks[nameBlock];
+    setStateBlocks(a);
+  };
 
   return (
     <div className={styles.container}>
@@ -32,8 +58,11 @@ export default function Filter() {
               arrOptions={filtersData.brand}
               onSelect={() => {}}
             />
-            <div className={styles.groupFilter}>
-              <h2 className={styles.groupFilterTitle}>Дисплей</h2>
+            <ContainerBlocks
+              title="Дисплей"
+              isActive={stateBlocks.display}
+              handleChangeState={() => changeStateBlock("display")}
+            >
               <CheckBoxFilter
                 title="Розмір"
                 arrActiveOptions={values.display_size}
@@ -58,7 +87,123 @@ export default function Filter() {
                 arrOptions={filtersData.display_refreshRate}
                 onSelect={() => {}}
               />
-            </div>
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Процесор"
+              isActive={stateBlocks.cpu}
+              handleChangeState={() => changeStateBlock("cpu")}
+            >
+              <CheckBoxFilter
+                title="Бренд"
+                arrActiveOptions={values.cpu_brand}
+                arrOptions={filtersData.cpu_brand}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Модель"
+                arrActiveOptions={values.cpu_name}
+                arrOptions={filtersData.cpu_name}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Дискретна відеокарта"
+              isActive={stateBlocks.discreteGraphicsCard}
+              handleChangeState={() => changeStateBlock("discreteGraphicsCard")}
+            >
+              <CheckBoxFilter
+                title="Бренд"
+                arrActiveOptions={values.graphicsCard_discrete_brand}
+                arrOptions={filtersData.graphicsCard_discrete_brand}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Модель"
+                arrActiveOptions={values.graphicsCard_discrete_model}
+                arrOptions={filtersData.graphicsCard_discrete_model}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Память"
+                arrActiveOptions={values.graphicsCard_discrete_memory}
+                arrOptions={filtersData.graphicsCard_discrete_memory}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Інтегрована відеокарта"
+              isActive={stateBlocks.integratedGraphicsCard}
+              handleChangeState={() =>
+                changeStateBlock("integratedGraphicsCard")
+              }
+            >
+              <CheckBoxFilter
+                title="Бренд"
+                arrActiveOptions={values.graphicsCard_discrete_brand}
+                arrOptions={filtersData.graphicsCard_discrete_brand}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Модель"
+                arrActiveOptions={values.graphicsCard_discrete_model}
+                arrOptions={filtersData.graphicsCard_discrete_model}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Оперативна память"
+              isActive={stateBlocks.ram}
+              handleChangeState={() => changeStateBlock("ram")}
+            >
+              <CheckBoxFilter
+                title="Тип"
+                arrActiveOptions={values.ram_type}
+                arrOptions={filtersData.ram_type}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Об'єм"
+                arrActiveOptions={values.ram_size}
+                arrOptions={filtersData.ram_size}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Постійна память"
+              isActive={stateBlocks.mem}
+              handleChangeState={() => changeStateBlock("mem")}
+            >
+              <CheckBoxFilter
+                title="Об'єм SSD"
+                arrActiveOptions={values.mem_ssd_size}
+                arrOptions={filtersData.mem_ssd_size}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Об'єм HDD"
+                arrActiveOptions={values.mem_hdd_size}
+                arrOptions={filtersData.mem_hdd_size}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
+            <ContainerBlocks
+              title="Камера"
+              isActive={stateBlocks.camera}
+              handleChangeState={() => changeStateBlock("camera")}
+            >
+              <CheckBoxFilter
+                title="Розширення"
+                arrActiveOptions={values.camera_mp}
+                arrOptions={filtersData.camera_mp}
+                onSelect={() => {}}
+              />
+              <CheckBoxFilter
+                title="Розпізнавання по обличчю"
+                arrActiveOptions={values.camera_ir}
+                arrOptions={filtersData.camera_ir}
+                onSelect={() => {}}
+              />
+            </ContainerBlocks>
           </div>
         )}
       </Formik>
