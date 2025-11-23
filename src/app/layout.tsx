@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import localFonts from "next/font/local";
 import "../styles/globals.css";
+import "../styles/scrollbar-styles.css"
 import Footer from "@/components/Footer";
 
 const myCustomFont = localFonts({

@@ -4,7 +4,16 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    overflow: scroll;
+    overflow-y: scroll;
+
+}
+
+.container::-webkit-scrollbar-track {
+    background: red; /* Цвет фона скроллбара */
+  }
+
+body::-webkit-scrollbar-track {
+  background: orange;        /* колір скролінгової області */
 }
 
 .title{

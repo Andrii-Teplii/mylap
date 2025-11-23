@@ -1,6 +1,6 @@
 import { Arrow } from "@/assets/icons/arrow";
 import React, { FC } from "react";
-import { ContainerBlocksTypes } from "./types";
+import { ContainerBlocksTypes } from "../ContainerBlock/types";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 

@@ -19,13 +19,14 @@
 .optionItem{
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     justify-content: flex-end;
     margin: 12px 0 12px 0;
     font-family: var(--font-inter);
     font-weight: 400;
-    font-size: 14;
+    font-size: 12;
     color: var(--color-white);
-    margin: 16px 16px 8px 0;
+    margin: 8px 16px 8px 0;
 }
 
 .optionInput[type="checkbox"]{

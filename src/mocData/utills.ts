@@ -1,5 +1,27 @@
 import { MocDataItem } from "./typeDataItem";
 
+export type FilterFieldsType = {
+  price: number[];
+  brand: string[];
+  display_size: string[];
+  display_resolution: string[];
+  display_type: string[];
+  display_refreshRate: string[];
+  cpu_name: string[];
+  cpu_brand: string[];
+  ram_type: string[];
+  ram_size: string[];
+  mem_ssd_size?: string[];
+  mem_hdd_size?: string[];
+  graphicsCard_discrete_brand?: string[];
+  graphicsCard_discrete_model?: string[];
+  graphicsCard_discrete_memory?: string[];
+  graphicsCard_integrate_brand?: string[];
+  graphicsCard_integrate_model?: string[];
+  camera_mp?: string[];
+  camera_ir?: boolean[];
+};
+
 const filterFields = [
   "price",
   "brand",
@@ -22,11 +44,10 @@ const filterFields = [
   "camera_ir",
 ] as const;
 
-export type FilterValue = string[] | number[] | boolean[] | null[];
 export type FilterKey = (typeof filterFields)[number];
 
 export const getFiltersData = (arrProducts: MocDataItem[]) => {
-  const result = {} as Record<FilterKey, FilterValue>;
+  const result = {} as FilterFieldsType;
 
   for (let i = 0; i < filterFields.length; i++) {
     const field = filterFields[i] as FilterKey;

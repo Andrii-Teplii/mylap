@@ -83,26 +83,23 @@ export type Dimensions = {
   dimensions_kg: number; // вага в кг
 };
 
-export type MocDataItem =
-  | {
-      id: string;
-      title: string;
-      brand: string;
-      price: number;
-      sellPrice: null | number;
-      description: string;
-      images: string[];
-      network: Network;
-      originalBox: boolean;
-    }
-  | Display
-  | CPU
-  | RAM
-  | Memory
-  | GraphicsCard
-  | Camera
-  | Ports
-  | Keyboard
-  | Network
-  | Battery
-  | Dimensions;
+export type MocDataItem = {
+  id: string;
+  title: string;
+  brand: string;
+  price: number;
+  sellPrice: null | number;
+  description: string;
+  images: string[];
+  originalBox: boolean;
+} & Display &
+  CPU &
+  RAM &
+  Memory &
+  GraphicsCard &
+  Camera &
+  Ports &
+  Keyboard &
+  Network &
+  Battery &
+  Dimensions;

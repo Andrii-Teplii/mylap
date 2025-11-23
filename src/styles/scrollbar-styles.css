@@ -1,0 +1,16 @@
+.filter-scrollbar-custom {
+    /* Для Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #4a90e2 transparent; /* Повзунок доріжка */
+}
+
+/* 1. Стилізуємо скролбар для WebKit браузерів (Chrome, Edge, Safari) */
+.filter-scrollbar-custom::-webkit-scrollbar {
+    width: 8px; /* Ширина скролбара */
+}
+
+.filter-scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #4a90e2; /* Колір повзунка */
+    border-radius: 4px;
+}
+

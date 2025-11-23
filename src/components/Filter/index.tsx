@@ -2,14 +2,17 @@
 
 import React, { useMemo, useState } from "react";
 import styles from "./styles.module.css";
-import { FilterKey, FilterValue, getFiltersData } from "@/mocData/utills";
+import { FilterFieldsType, FilterKey, getFiltersData } from "@/mocData/utills";
 import { arrayProducts } from "@/mocData/data";
 import { CheckBoxFilter } from "../CheckBoxFilter";
 import { Formik } from "formik";
-import { ContainerBlocks } from "./components/ContainerBlocks";
+import { ContainerBlocks } from "./components/ContainerBlock/ContainerBlocks";
+import { Range } from "react-range";
+import { RangeSlider } from "./components/RangeSlider";
 
 export default function Filter() {
   const filtersData = getFiltersData(arrayProducts);
+  const [valuesPrice, setValuesPrice] = React.useState([50, 80]);
 
   type ListBlockType =
     | "display"
@@ -33,7 +36,7 @@ export default function Filter() {
   });
 
   const emptyFilter = useMemo(() => {
-    const acc = {} as Record<FilterKey, FilterValue>;
+    const acc = {} as FilterFieldsType;
     for (const key in filtersData) {
       acc[key as FilterKey] = [];
     }
@@ -47,7 +50,7 @@ export default function Filter() {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} filter-scrollbar-custom`}>
       <h1 className={styles.title}>Фільтри</h1>
       <Formik initialValues={emptyFilter} onSubmit={() => {}}>
         {({ values, handleSubmit, errors, setFieldValue }) => (
@@ -57,6 +60,12 @@ export default function Filter() {
               arrActiveOptions={values.brand}
               arrOptions={filtersData.brand}
               onSelect={() => {}}
+            />
+            <RangeSlider
+              min={Math.min(...filtersData.price)}
+              max={Math.max(...filtersData.price)}
+              values={values.price}
+              onChange={(v) => setFieldValue("values.price", v)}
             />
             <ContainerBlocks
               title="Дисплей"
