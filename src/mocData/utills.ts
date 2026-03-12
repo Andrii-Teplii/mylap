@@ -66,3 +66,8 @@ export const getFiltersData = (arrProducts: MocDataItem[]) => {
   }
   return result;
 };
+
+// export const getListProducts = (filters:FilterFieldsType) =>{
+
+//   return :
+// }

@@ -9,7 +9,7 @@
 }
 
 .container::-webkit-scrollbar-track {
-    background: red; /* Цвет фона скроллбара */
+    background: transparent; /* Цвет фона скроллбара */
   }
 
 body::-webkit-scrollbar-track {
