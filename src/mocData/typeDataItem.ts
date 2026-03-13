@@ -1,34 +1,34 @@
 export type Display = {
-  display_size: string; // Наприклад, "15.6"
+  display_size: number; // Наприклад, "15.6"
   display_resolution: string; // Наприклад, "1920x1080"
   display_type: string; // Тип матриці, напр. "IPS"
   display_finish: string; // "матовий", "глянцевий" і т.п.
   display_sensor: boolean; // Чи сенсорний екран
-  display_refreshRate: string; // Наприклад, "144" Гц
+  display_refreshRate: number; // Наприклад, "144" Гц
 };
 
 export type CPU = {
   cpu_name: string; // Наприклад, "i7-9750H"
   cpu_brand: string; // "Intel", "AMD"
-  cpu_gen: string; // Наприклад, "9-го"
-  cpu_power: string; // TDP, напр. "45" Вт
+  cpu_gen: number; // Наприклад, "9-го"
+  cpu_power: number; // TDP, напр. "45" Вт
 };
 
 export type RAM = {
   ram_type: string; // DDR4, DDR5
-  ram_size: string; // Обсяг у ГБ
-  ram_emptySlot: string; // Кількість вільних слотів
+  ram_size: number; // Обсяг у ГБ
+  ram_emptySlot: number; // Кількість вільних слотів
 };
 
 type StorageSSD = {
-  mem_ssd_size: string | null; // ГБ
+  mem_ssd_size: number | null; // ГБ
   mem_ssd_type: "NVMe" | "M2";
-  mem_ssd_emptySlots: string; // Слоти для розширення
+  mem_ssd_emptySlots: number; // Слоти для розширення
 };
 
 type StorageHDD = {
-  mem_hdd_size: string | null; // ГБ
-  mem_hdd_emptySlots: string; // Слоти для розширення
+  mem_hdd_size: number | null; // ГБ
+  mem_hdd_emptySlots: number; // Слоти для розширення
 };
 
 export type Memory = StorageSSD | StorageHDD;
@@ -36,7 +36,7 @@ export type Memory = StorageSSD | StorageHDD;
 type DiscreteGPU = {
   graphicsCard_discrete_brand: string | null;
   graphicsCard_discrete_model: string;
-  graphicsCard_discrete_memory: string; // ГБ
+  graphicsCard_discrete_memory: number; // ГБ
 };
 
 type IntegratedGPU = {
@@ -47,16 +47,16 @@ type IntegratedGPU = {
 export type GraphicsCard = DiscreteGPU | IntegratedGPU;
 
 export type Camera = {
-  camera_mp: string | null; // Мегапікселі
+  camera_mp: number | null; // Мегапікселі
   camera_ir: boolean; // Інфрачервона камера (для розпізнавання обличчя)
 };
 
 export type Ports = {
-  ports_usbTypeA: string | null;
-  ports_usbTypeC: string | null;
-  ports_HDMI: string | null;
-  ports_DisplayPort: string | null;
-  ports_dvd: boolean | null;
+  ports_usbTypeA: number | null;
+  ports_usbTypeC: number | null;
+  ports_HDMI: number | null;
+  ports_DisplayPort: number | null;
+  ports_dvd: boolean;
   ports_audioJack: number | null;
   ports_rj45: boolean;
 };
@@ -73,7 +73,7 @@ export type Network = {
 };
 
 export type Battery = {
-  battery_twb: string; // Час безперевного перегляду відео(напр. 3)
+  battery_twb: number; // Час безперевного перегляду відео(напр. 3)
 };
 
 export type Dimensions = {
